@@ -29,4 +29,5 @@ var User = /** @class */ (function () {
     return User;
 }());
 var ihor = new User('ihor', 44, 'csvs');
+module.exports = ihor;
 console.log(ihor);
