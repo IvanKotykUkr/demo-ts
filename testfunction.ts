@@ -118,4 +118,63 @@ let userid:{name:string,age:number,adress:{city:string,streat:string},showinfo:a
         console.log((this.name),(this.age),'містою ',(this.adress ));
     }
 }
-userid.showinfo();*/
+userid.showinfo();
+type Person = {name:string,age:number}
+
+function UserInfo (name:string){
+    this.name = name;
+    this.age = 40;
+
+}
+console.log(new UserInfo(44))
+
+let userid:{name:string,age:number,adress:{city:string,streat:string},showinfo:any}= {
+    name:'vasya',
+    age:33,
+    adress:{
+        city:'lviv',
+        streat:"central",
+    },
+    showinfo (){
+        console.log((this.name));
+    }
+}
+let user:any=userid;
+userid=null;
+user.showinfo();
+ */
+
+
+class Animal{
+
+
+    constructor(
+        public name:string,
+        public age:number,
+        public hastail?:boolean,
+
+    ) {}
+
+}
+const animal = new Animal('dog',10,true)
+
+
+class Cat extends Animal{
+
+    constructor(name,age,hastail,public color:string,) {
+        super(name,age,hastail);
+    }
+     public get agedate () {
+        return this.age*4;
+    }
+    public set agedate(NewAge){
+        this.age= NewAge
+    }
+
+}
+
+const cat = new Cat('CAT',4,true,'black')
+
+console.log(cat.agedate=8)
+console.log(cat.agedate)
+
