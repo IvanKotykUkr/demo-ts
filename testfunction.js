@@ -142,27 +142,81 @@ let userid:{name:string,age:number,adress:{city:string,streat:string},showinfo:a
 let user:any=userid;
 userid=null;
 user.showinfo();
- */
-class Animal {
-    constructor(name, age, hastail) {
-        this.name = name;
-        this.age = age;
-        this.hastail = hastail;
-    }
+
+
+
+class Animal{
+
+
+    constructor(
+        public name:string,
+        public age:number,
+        public hastail?:boolean,
+
+    ) {}
+
 }
-const animal = new Animal('dog', 10, true);
-class Cat extends Animal {
-    constructor(name, age, hastail, color) {
-        super(name, age, hastail);
-        this.color = color;
+const animal = new Animal('dog',10,true)
+
+
+class Cat extends Animal{
+
+    constructor(name,age,hastail,public color:string,) {
+        super(name,age,hastail);
     }
-    get agedate() {
-        return this.age * 4;
+     public get agedate () {
+        return this.age*4;
     }
-    set agedate(NewAge) {
-        this.age = NewAge;
+    public set agedate(NewAge){
+        this.age= NewAge
     }
+
 }
-const cat = new Cat('CAT', 4, true, 'black');
-console.log(cat.agedate = 8);
-console.log(cat.agedate);
+
+const cat = new Cat('CAT',4,true,'black')
+
+console.log(cat.agedate=8)
+console.log(cat.agedate)
+
+
+const calcSum:any = (numOne:number,numTwo:number,more:any,less:any) => {
+    let numSum:number=numOne+numTwo;
+
+    if (numSum>4){
+        more();
+    }else {
+        less();
+    }
+
+}
+
+function schowMoreMessege() {
+    console.log('More than 3')
+};
+function schowLessMessege(){
+    console.log('Less than 3')
+}
+
+
+calcSum(1,1,schowMoreMessege,schowLessMessege)
+*/
+var numberone = 4;
+var numbertwo = 2;
+while (numberone > numbertwo) {
+    console.log(numberone + " >" + numbertwo);
+    break;
+}
+;
+for (var number = 0; number <= 6; number++) {
+    if (number == 3)
+        continue;
+    if (number === 6)
+        break;
+    console.log(number);
+}
+if (25 > 23) {
+    console.log("False");
+}
+else {
+    console.log("25>23");
+}

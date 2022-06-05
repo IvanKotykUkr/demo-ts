@@ -1,0 +1,12 @@
+db.users.update(
+    {name:"Olya"},
+    {
+        $set:{
+            name:"iron man"
+            age:232
+
+        }
+
+    }
+
+)

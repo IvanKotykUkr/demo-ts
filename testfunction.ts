@@ -142,7 +142,7 @@ let userid:{name:string,age:number,adress:{city:string,streat:string},showinfo:a
 let user:any=userid;
 userid=null;
 user.showinfo();
- */
+
 
 
 class Animal{
@@ -177,4 +177,50 @@ const cat = new Cat('CAT',4,true,'black')
 
 console.log(cat.agedate=8)
 console.log(cat.agedate)
+
+
+const calcSum:any = (numOne:number,numTwo:number,more:any,less:any) => {
+    let numSum:number=numOne+numTwo;
+
+    if (numSum>4){
+        more();
+    }else {
+        less();
+    }
+
+}
+
+function schowMoreMessege() {
+    console.log('More than 3')
+};
+function schowLessMessege(){
+    console.log('Less than 3')
+}
+
+
+calcSum(1,1,schowMoreMessege,schowLessMessege)
+*/
+
+let numberone:number=4;
+let numbertwo:number=2;
+
+
+while (numberone>numbertwo){
+    console.log(numberone + " >"+numbertwo)
+    break
+};
+
+for (let number:number=0;number<=6;number++){
+
+    if(number==3) continue
+    if (number===6)break
+    console.log(number)
+}
+if(25>23){
+    console.log("False")
+}else {
+    console.log("25>23")
+}
+
+
 
